@@ -22,9 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="060-Ii-xxb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="acY-jq-LAm">
                                 <rect key="frame" x="32" y="40" width="256" height="227"/>
                                 <subviews>
@@ -94,6 +91,7 @@
                                                 <state key="selected" image="ellipsis-selected"/>
                                                 <connections>
                                                     <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwx-my-ByN"/>
+                                                    <action selector="personMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkQ-fI-bjr"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -163,7 +161,7 @@
                                                 <state key="normal" image="ellipsis-normal"/>
                                                 <state key="selected" image="ellipsis-selected"/>
                                                 <connections>
-                                                    <action selector="star1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OXB-Ph-1QR"/>
+                                                    <action selector="starMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HiJ-59-q3d"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -208,14 +206,10 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="acY-jq-LAm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="4BI-8y-CuD"/>
-                            <constraint firstAttribute="trailing" secondItem="060-Ii-xxb" secondAttribute="trailing" id="HzW-oz-Vmh"/>
-                            <constraint firstItem="060-Ii-xxb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IAF-Qj-Hp4"/>
-                            <constraint firstItem="060-Ii-xxb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ste-5e-plw"/>
                             <constraint firstItem="acY-jq-LAm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="uDM-hd-xXx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="060-Ii-xxb" secondAttribute="bottom" id="uTI-QM-P68"/>
                             <constraint firstItem="acY-jq-LAm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="wwE-f5-Wez"/>
                             <constraint firstItem="acY-jq-LAm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x1c-4O-inx"/>
                         </constraints>
@@ -227,11 +221,13 @@
                         <outlet property="person3" destination="npD-5f-3y8" id="Iuy-It-ZSN"/>
                         <outlet property="person4" destination="zjX-KS-siQ" id="hhK-jE-SSV"/>
                         <outlet property="person5" destination="41D-yk-3Xf" id="EML-nB-zZX"/>
+                        <outlet property="personMore" destination="fhF-Vb-fSX" id="fiJ-BZ-1Jo"/>
                         <outlet property="star1" destination="elf-a0-E0m" id="laU-my-ed6"/>
                         <outlet property="star2" destination="naC-jl-maV" id="SbS-5j-fhh"/>
                         <outlet property="star3" destination="K8H-tx-YL6" id="PC2-xU-Qja"/>
                         <outlet property="star4" destination="0bJ-x0-EiJ" id="uu5-tJ-tFN"/>
                         <outlet property="star5" destination="sEE-kf-2fQ" id="zic-5i-Lgq"/>
+                        <outlet property="starMore" destination="CQ4-tP-LkM" id="9Ca-2k-t1B"/>
                         <outlet property="starTitle" destination="vuV-If-MUP" id="Y8c-aX-meF"/>
                     </connections>
                 </viewController>
@@ -241,7 +237,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="2215" height="2250"/>
         <image name="ellipsis-normal" width="41" height="8"/>
         <image name="ellipsis-selected" width="41" height="8"/>
         <image name="person-normal" width="40" height="49"/>
