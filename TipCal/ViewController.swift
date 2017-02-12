@@ -116,21 +116,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     
     @IBAction func star1(_ sender: UIButton) {
-            //if sender.tag < 6 {
-            sender.isSelected = true
-            let currentTag = sender.tag
-        
-            star1.isSelected = (star1.tag <= currentTag)
-            star2.isSelected = (star2.tag <= currentTag)
-            star3.isSelected = (star3.tag <= currentTag)
-            star4.isSelected = (star4.tag <= currentTag)
-            star5.isSelected = (star5.tag <= currentTag)
-        
-            // let services = ["Include", "Poor", "Fair", "Good", "Great", "Excellent"]
-            //starTitle.text = @( Service   %s)   5% * currentTag,  services[tag]
-        
-            starCount = currentTag
-            //}
+        starCount = sender.tag
+        updateStarIcons()
     }
 
     @IBAction func starMore(_ sender: UIButton) {
@@ -247,59 +234,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }else {
             starTitle.text = starArray[row]
             starCount = row
-            switch row {
-            case 0:
-                star1.isSelected = false
-                star2.isSelected = false
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-                starCount = 0
-            case 1:
-                star1.isSelected = true
-                star2.isSelected = false
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-            case 2:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-            case 3:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = true
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-            case 4:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = true
-                star4.isSelected = true
-                star5.isSelected = false
-                starMore.isSelected = false
-            case 5:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = true
-                star4.isSelected = true
-                star5.isSelected = true
-                starMore.isSelected = false
-            default:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = true
-                star4.isSelected = true
-                star5.isSelected = true
-                starMore.isSelected = true
-            }
-   
+            updateStarIcons()
         }
   
     }
@@ -311,9 +246,15 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     //Update stars according to starCount
     func updateStarIcons() {
+        star1.isSelected = (star1.tag <= starCount)
+        star2.isSelected = (star2.tag <= starCount)
+        star3.isSelected = (star3.tag <= starCount)
+        star4.isSelected = (star4.tag <= starCount)
+        star5.isSelected = (star5.tag <= starCount)
+        starMore.isSelected = (starMore.tag <= starCount)
         
+        // let services = ["Include", "Poor", "Fair", "Good", "Great", "Excellent"]
+        //starTitle.text = @( Service   %s)   5% * currentTag,  services[tag]
     }
-    
-
 }
 
