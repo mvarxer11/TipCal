@@ -303,8 +303,17 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }
   
     }
-
-
+    
+    //Update persons according to personCount
+    func updatePersonIcons() {
+        
+    }
+    
+    //Update stars according to starCount
+    func updateStarIcons() {
+        
+    }
+    
 
 }
 
