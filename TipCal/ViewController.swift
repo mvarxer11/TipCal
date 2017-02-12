@@ -116,90 +116,21 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     
     @IBAction func star1(_ sender: UIButton) {
-        
-        if sender.isSelected == true {
-            sender.isSelected = false
-            switch sender.tag {
-            case 1:
-                star2.isSelected = false
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "0% Service Included"
-                starCount = 0
-            case 2:
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "5% Service Poor"
-                starCount = 1
-            case 3:
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "10% Service Fair"
-                starCount = 2
-            case 4:
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "15% Service Good!"
-                starCount = 3
-            case 5:
-                 starMore.isSelected = false
-                starTitle.text = "20% Service Great!"
-                starCount = 4
-            default:
-                break
-            }
-    
-        }else {
+            //if sender.tag < 6 {
             sender.isSelected = true
-            switch sender.tag {
-            case 1:
-                star2.isSelected = false
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "5% Service Poor"
-                starCount = 1
-            case 2:
-                star1.isSelected = true
-                star3.isSelected = false
-                star4.isSelected = false
-                star5.isSelected = false
-                starTitle.text = "10% Service Fair"
-                starCount = 2
-            case 3:
-                star1.isSelected = true
-                star2.isSelected = true
-                star4.isSelected = false
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "15% Service Good!"
-                starCount = 3
-            case 4:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = true
-                star5.isSelected = false
-                starMore.isSelected = false
-                starTitle.text = "20% Service Great!"
-                starCount = 4
-            case 5:
-                star1.isSelected = true
-                star2.isSelected = true
-                star3.isSelected = true
-                star4.isSelected = true
-                starMore.isSelected = false
-                starTitle.text = "25% Service Excellent!"
-                starCount = 5
-            default:
-                break
-            }
-        }
+            let currentTag = sender.tag
+        
+            star1.isSelected = (star1.tag <= currentTag)
+            star2.isSelected = (star2.tag <= currentTag)
+            star3.isSelected = (star3.tag <= currentTag)
+            star4.isSelected = (star4.tag <= currentTag)
+            star5.isSelected = (star5.tag <= currentTag)
+        
+            // let services = ["Include", "Poor", "Fair", "Good", "Great", "Excellent"]
+            //starTitle.text = @( Service   %s)   5% * currentTag,  services[tag]
+        
+            starCount = currentTag
+            //}
     }
 
     @IBAction func starMore(_ sender: UIButton) {
