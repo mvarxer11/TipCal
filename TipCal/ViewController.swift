@@ -31,14 +31,14 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     var pickerSelect = 0 //0表示未选，1为people，2为star
     
     
-    @IBAction func TapPeople(_ sender: UIButton) {
+    @IBAction func tapPeople(_ sender: UIButton) {
         peopleCount = sender.tag
-        peopleStateSet(count: peopleCount)
+        updatePeopleIcon(count: peopleCount)
         peopleTitle.text = peopleSplitStringMake(number: peopleCount)
     }
     
     
-    func peopleStateSet(count:Int) {
+    func updatePeopleIcon(count:Int) {
         people1.isSelected = (people1.tag <= count)
         people2.isSelected = (people2.tag <= count)
         people3.isSelected = (people3.tag <= count)
@@ -56,12 +56,12 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBAction func tapStar(_ sender: UIButton) {
         
         starCount = sender.tag * 5
-        starStateSet(count: sender.tag)
+        updateStarIcon(count: sender.tag)
         starTitle.text = serviceStringMake(percentage: starCount)
         
     }
     
-    func starStateSet(count:Int) {
+    func updateStarIcon(count:Int) {
         star1.isSelected = (star1.tag <= count)
         star2.isSelected = (star2.tag <= count)
         star3.isSelected = (star3.tag <= count)
@@ -69,7 +69,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         star5.isSelected = (star5.tag <= count)
         starMore.isSelected = (starMore.tag <= count)
     }
-    
     
     
     @IBAction func starMore(_ sender: UIButton) {
@@ -96,12 +95,9 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         self.present(alertController, animated: true, completion: nil)
     }
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
     
     //组件数
@@ -116,8 +112,6 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         }else {
             return 51 //(ServiceString 从0%到50%包含0所以是51个)
         }
-        
-        
     }
     
     //每行的标题
@@ -131,22 +125,17 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     //选项改变后，触发代理事件
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
         if pickerSelect == 1 {
             peopleTitle.text = peopleSplitStringMake(number: row + 1)
             peopleCount = row + 1
-            peopleStateSet(count: peopleCount)
+            updatePeopleIcon(count: peopleCount)
             
         }else {
             starTitle.text = serviceStringMake(percentage: row)
             starCount = row
-            starStateSet(count: starCount/5)
-            
+            updateStarIcon(count: starCount/5)
         }
-        
     }
-    
-    
     
 }
 

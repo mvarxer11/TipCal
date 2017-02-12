@@ -50,7 +50,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZN-Z6-CDB"/>
+                                                    <action selector="tapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLd-Js-uGZ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-1b-occ">
@@ -58,7 +58,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBn-3M-8bP"/>
+                                                    <action selector="tapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tTU-da-Gup"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npD-5f-3y8">
@@ -66,7 +66,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhk-fY-0JA"/>
+                                                    <action selector="tapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TLz-AL-jJG"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjX-KS-siQ">
@@ -74,7 +74,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ua-nl-cab"/>
+                                                    <action selector="tapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9B-kd-aYm"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41D-yk-3Xf">
@@ -82,7 +82,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xac-LX-vEg"/>
+                                                    <action selector="tapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hX-dQ-h0S"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-Vb-fSX">
