@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +50,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KqD-8O-bWA"/>
+                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZN-Z6-CDB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ov-1b-occ">
@@ -58,7 +58,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAD-6s-W5F"/>
+                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBn-3M-8bP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npD-5f-3y8">
@@ -66,7 +66,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwN-SZ-8e1"/>
+                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vhk-fY-0JA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjX-KS-siQ">
@@ -74,7 +74,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0S3-2N-KVU"/>
+                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Ua-nl-cab"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41D-yk-3Xf">
@@ -82,7 +82,7 @@
                                                 <state key="normal" image="person-normal"/>
                                                 <state key="selected" image="person-selected"/>
                                                 <connections>
-                                                    <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydq-jV-ylQ"/>
+                                                    <action selector="TapPeople:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xac-LX-vEg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-Vb-fSX">
@@ -90,8 +90,7 @@
                                                 <state key="normal" image="ellipsis-normal"/>
                                                 <state key="selected" image="ellipsis-selected"/>
                                                 <connections>
-                                                    <action selector="person:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwx-my-ByN"/>
-                                                    <action selector="personMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkQ-fI-bjr"/>
+                                                    <action selector="peopleMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sNw-ec-1vQ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -121,7 +120,7 @@
                                                 <state key="normal" image="star-normal"/>
                                                 <state key="selected" image="star-selected"/>
                                                 <connections>
-                                                    <action selector="star1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U25-q3-6aL"/>
+                                                    <action selector="tapStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ2-c0-joi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naC-jl-maV">
@@ -129,7 +128,7 @@
                                                 <state key="normal" image="star-normal"/>
                                                 <state key="selected" image="star-selected"/>
                                                 <connections>
-                                                    <action selector="star1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTO-iX-hc1"/>
+                                                    <action selector="tapStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zR8-kQ-7wu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8H-tx-YL6">
@@ -137,7 +136,7 @@
                                                 <state key="normal" image="star-normal"/>
                                                 <state key="selected" image="star-selected"/>
                                                 <connections>
-                                                    <action selector="star1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCD-Bo-qg2"/>
+                                                    <action selector="tapStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zOF-yD-Wql"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bJ-x0-EiJ">
@@ -145,7 +144,7 @@
                                                 <state key="normal" image="star-normal"/>
                                                 <state key="selected" image="star-selected"/>
                                                 <connections>
-                                                    <action selector="star1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xL-Ov-Tti"/>
+                                                    <action selector="tapStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxF-zE-7yy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEE-kf-2fQ">
@@ -153,7 +152,7 @@
                                                 <state key="normal" image="star-normal"/>
                                                 <state key="selected" image="star-selected"/>
                                                 <connections>
-                                                    <action selector="star1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6o-4W-CjD"/>
+                                                    <action selector="tapStar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fb-KA-7My"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ4-tP-LkM">
@@ -161,7 +160,7 @@
                                                 <state key="normal" image="ellipsis-normal"/>
                                                 <state key="selected" image="ellipsis-selected"/>
                                                 <connections>
-                                                    <action selector="starMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HiJ-59-q3d"/>
+                                                    <action selector="starMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36t-WP-J3w"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -215,25 +214,25 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="people1" destination="yAx-OI-0vY" id="66C-KQ-Ybe"/>
+                        <outlet property="people2" destination="7Ov-1b-occ" id="Q1l-xt-VkO"/>
+                        <outlet property="people3" destination="npD-5f-3y8" id="Cq9-uu-W1Y"/>
+                        <outlet property="people4" destination="zjX-KS-siQ" id="Yt7-NK-FZA"/>
+                        <outlet property="people5" destination="41D-yk-3Xf" id="plD-TG-ksp"/>
+                        <outlet property="peopleMore" destination="fhF-Vb-fSX" id="riR-bv-2G4"/>
                         <outlet property="peopleTitle" destination="klE-Pe-NjH" id="ODu-Qd-xOu"/>
-                        <outlet property="person1" destination="yAx-OI-0vY" id="Hi4-59-5kr"/>
-                        <outlet property="person2" destination="7Ov-1b-occ" id="99T-Sd-HYJ"/>
-                        <outlet property="person3" destination="npD-5f-3y8" id="Iuy-It-ZSN"/>
-                        <outlet property="person4" destination="zjX-KS-siQ" id="hhK-jE-SSV"/>
-                        <outlet property="person5" destination="41D-yk-3Xf" id="EML-nB-zZX"/>
-                        <outlet property="personMore" destination="fhF-Vb-fSX" id="fiJ-BZ-1Jo"/>
-                        <outlet property="star1" destination="elf-a0-E0m" id="laU-my-ed6"/>
-                        <outlet property="star2" destination="naC-jl-maV" id="SbS-5j-fhh"/>
-                        <outlet property="star3" destination="K8H-tx-YL6" id="PC2-xU-Qja"/>
-                        <outlet property="star4" destination="0bJ-x0-EiJ" id="uu5-tJ-tFN"/>
-                        <outlet property="star5" destination="sEE-kf-2fQ" id="zic-5i-Lgq"/>
-                        <outlet property="starMore" destination="CQ4-tP-LkM" id="9Ca-2k-t1B"/>
+                        <outlet property="star1" destination="elf-a0-E0m" id="2hp-9H-bt3"/>
+                        <outlet property="star2" destination="naC-jl-maV" id="Bry-6D-Q05"/>
+                        <outlet property="star3" destination="K8H-tx-YL6" id="6V6-Cv-Et7"/>
+                        <outlet property="star4" destination="0bJ-x0-EiJ" id="Bin-6T-8dl"/>
+                        <outlet property="star5" destination="sEE-kf-2fQ" id="4r5-ln-CGw"/>
+                        <outlet property="starMore" destination="CQ4-tP-LkM" id="Nrx-Bv-KRo"/>
                         <outlet property="starTitle" destination="vuV-If-MUP" id="Y8c-aX-meF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217.5" y="-43.309859154929576"/>
+            <point key="canvasLocation" x="49" y="-41"/>
         </scene>
     </scenes>
     <resources>
