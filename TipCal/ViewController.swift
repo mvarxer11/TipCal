@@ -47,15 +47,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
                 let people = v as! UIButton
                 people.isSelected = (people.tag <= count)
             }
-            
         }
-        
-        people1.isSelected = (people1.tag <= count)
-        people2.isSelected = (people2.tag <= count)
-        people3.isSelected = (people3.tag <= count)
-        people4.isSelected = (people4.tag <= count)
-        people5.isSelected = (people5.tag <= count)
-        peopleMore.isSelected = (peopleMore.tag <= count)
     }
     
     
