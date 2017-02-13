@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
+    
+    @IBOutlet weak var peopleView: UIStackView!
     @IBOutlet weak var peopleTitle: UILabel!
     @IBOutlet weak var people1: UIButton!
     @IBOutlet weak var people2: UIButton!
@@ -40,6 +42,14 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     
     func updatePeopleIcon(count:Int) {
+        for v in peopleView.subviews {
+            if v.isKind(of: UIButton.self) {
+                let people = v as! UIButton
+                people.isSelected = (people.tag <= count)
+            }
+            
+        }
+        
         people1.isSelected = (people1.tag <= count)
         people2.isSelected = (people2.tag <= count)
         people3.isSelected = (people3.tag <= count)

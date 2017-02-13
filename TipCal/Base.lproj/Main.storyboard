@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -221,6 +221,7 @@
                         <outlet property="people5" destination="41D-yk-3Xf" id="plD-TG-ksp"/>
                         <outlet property="peopleMore" destination="fhF-Vb-fSX" id="riR-bv-2G4"/>
                         <outlet property="peopleTitle" destination="klE-Pe-NjH" id="ODu-Qd-xOu"/>
+                        <outlet property="peopleView" destination="ohC-4W-3Ua" id="GLX-hL-PNk"/>
                         <outlet property="star1" destination="elf-a0-E0m" id="2hp-9H-bt3"/>
                         <outlet property="star2" destination="naC-jl-maV" id="Bry-6D-Q05"/>
                         <outlet property="star3" destination="K8H-tx-YL6" id="6V6-Cv-Et7"/>
