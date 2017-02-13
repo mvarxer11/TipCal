@@ -19,6 +19,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBOutlet weak var peopleMore: UIButton!
     var peopleCount = 2 //默认2人数 以此来判断pickerView的初始位置
     
+    @IBOutlet weak var starView: UIStackView!
     @IBOutlet weak var starTitle: UILabel!
     @IBOutlet weak var star1: UIButton!
     @IBOutlet weak var star2: UIButton!
@@ -62,12 +63,12 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     }
     
     func updateStarIcon(count:Int) {
-        star1.isSelected = (star1.tag <= count)
-        star2.isSelected = (star2.tag <= count)
-        star3.isSelected = (star3.tag <= count)
-        star4.isSelected = (star4.tag <= count)
-        star5.isSelected = (star5.tag <= count)
-        starMore.isSelected = (starMore.tag <= count)
+        for v in starView.subviews {
+            if v.isKind(of: UIButton.self) {
+                let star = v as! UIButton
+                star.isSelected = (star.tag <= count)
+            }
+        }
     }
     
     
