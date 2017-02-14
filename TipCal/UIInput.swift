@@ -15,26 +15,18 @@ protocol InputViewDelegate {
     func numberOfColumns() -> Int
     func buttonSetting() -> [(title:String,xTag:Int,yTag:Int,xCount:Int,yCount:Int)]  //一个按钮可能占了几个小格子
     //arr = [("title",1,1,1,2] 比如这个按钮位于第12行 第4列
-    func ButtonClick()
+    func ButtonClick(_ titil:String)
     
 }
 
 
 class UIInputView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     var delegate:InputViewDelegate?
-
-    
     var resultString:String = ""
     var buttonArray:[UIButton] = []
+    var count = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,11 +54,15 @@ class UIInputView: UIView {
     
     func creatButton() {
         for b in (delegate?.buttonSetting())! {
+            count += 1
             let btn = UIButton(frame: makeFrame(xTag:b.xTag,yTag:b.yTag,xCount:b.xCount,yCount:b.yCount))
             btn.backgroundColor = .lightGray
             btn.layer.cornerRadius = 5
             btn.setTitle(b.title, for: .normal)
-            btn.addTarget(self, action: #selector(self.doWithClick), for: .touchUpInside)
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: 22)
+            btn.showsTouchWhenHighlighted = true
+            btn.addTarget(self, action: #selector(UIInputView.btnClicked(_:)), for: .touchUpInside)
+            btn.tag = 1000 + count
             buttonArray.append(btn)
             self.addSubview(btn)
             print(btn)
@@ -77,14 +73,10 @@ class UIInputView: UIView {
         creatButton()
     }
     
-    deinit {
-        
-        print("deinit")
-    }
     
-    func doWithClick() {
-        print("sdlkslkdjf")
-        delegate?.ButtonClick()
+    func btnClicked(_ btn:UIButton) {
+        print(btn.title(for: .normal) ?? "btnTitle no found.")
+        delegate?.ButtonClick(btn.title(for: .normal)!)
     }
 
 }

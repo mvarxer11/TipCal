@@ -9,7 +9,16 @@
 import UIKit
 
 extension ViewController:InputViewDelegate {
-    
+    func ButtonClick(_ title:String) {
+        var resultString:String = textField.text!
+        switch title {
+        case "1","2","3","4","5","6","7","8","9","0":
+            resultString += title
+        default:
+            break
+        }
+        textField.text = resultString
+    }
     
     func space() -> Int{
         return 5
@@ -29,7 +38,7 @@ extension ViewController:InputViewDelegate {
         ("7",1,1,1,1),
         ("8",2,1,1,1),
         ("9",3,1,1,1),
-        ("c",4,1,1,1),
+        ("C",4,1,1,1),
         
         ("4",1,2,1,1),
         ("5",2,2,1,1),
@@ -45,10 +54,6 @@ extension ViewController:InputViewDelegate {
         ("Done",4,4,1,1),
 
         ]
-    }
-    
-    func ButtonClick(){
-        print("hehe")
     }
     
 }
