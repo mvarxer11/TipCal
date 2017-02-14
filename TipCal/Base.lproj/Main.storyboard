@@ -230,11 +230,12 @@
                         <outlet property="starMore" destination="CQ4-tP-LkM" id="Nrx-Bv-KRo"/>
                         <outlet property="starTitle" destination="vuV-If-MUP" id="Y8c-aX-meF"/>
                         <outlet property="starView" destination="r95-dg-hqe" id="AfR-bG-G93"/>
+                        <outlet property="textField" destination="d6b-DC-lea" id="WHb-r7-BLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="-41"/>
+            <point key="canvasLocation" x="48.75" y="-41.197183098591552"/>
         </scene>
     </scenes>
     <resources>

@@ -1,18 +1,23 @@
 //
-//  TipCalTests.swift
-//  TipCalTests
+//  TestInputView.swift
+//  TipCal
 //
-//  Created by mvarxer on 17/2/9.
+//  Created by mvarxer on 17/2/14.
 //  Copyright © 2017年 mvarxer. All rights reserved.
 //
 
 import XCTest
-@testable import TipCal
 
-class TipCalTests: XCTestCase {
+class TestInputView: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
+        
+        
+        
+        
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -32,7 +37,5 @@ class TipCalTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    
     
 }

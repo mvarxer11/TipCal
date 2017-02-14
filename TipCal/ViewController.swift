@@ -31,7 +31,17 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     @IBOutlet weak var starMore: UIButton!
     var starCount = 15  //15% 默认三颗星  以此来判断pickerView的初始位置
     
+    @IBOutlet weak var textField: UITextField!
+    
+    //用于弹出的视图
+    var popView:UIView!
+    var backgroundView:UIView!
+    var pickerView:UIPickerView!
     var pickerSelect = 0 //0表示未选，1为people，2为star
+    
+    //弹出数字输入视图
+    var numInputView:UIInputView!
+    
     
     
     @IBAction func tapPeople(_ sender: UIButton) {
@@ -53,7 +63,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     @IBAction func peopleMore(_ sender: UIButton) {
         pickerSelect = 1
-        setAlertView()
+//        setAlertView()
+        popPickerView()
     }
     
     @IBAction func tapStar(_ sender: UIButton) {
@@ -76,32 +87,17 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     @IBAction func starMore(_ sender: UIButton) {
         pickerSelect = 2
-        setAlertView()
+//        setAlertView()
+        popPickerView()
     }
     
-    func setAlertView() {
-        let alertController:UIAlertController = UIAlertController(title: "\n\n\n\n\n\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
-        
-        let pickerView = UIPickerView()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        if pickerSelect == 1 {
-            pickerView.selectRow(peopleCount-1, inComponent: 0, animated: false)
-        }else {
-            pickerView.selectRow(starCount, inComponent: 0, animated: false)
-        }
-        
-        alertController.view.addSubview(pickerView)
-        
-        let OKBtn = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertController.addAction(OKBtn)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
 
     }
+
     
     //组件数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
