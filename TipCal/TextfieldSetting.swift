@@ -22,12 +22,11 @@ extension ViewController:UITextFieldDelegate {
         textField.inputView = numInputView
         
 
-    }// became first responder
-//
-//        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//            
-//            textField.resignFirstResponder()
-//            return true
-//        }
+    }
+    
+    //释放键盘  这里是否需要对键盘弹出视图做清理工作？待研究
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.resignFirstResponder()
+    }
     
 }

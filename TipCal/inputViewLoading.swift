@@ -11,13 +11,41 @@ import UIKit
 extension ViewController:InputViewDelegate {
     func ButtonClick(_ title:String) {
         var resultString:String = textField.text!
+        resultString.characters.removeFirst()  //"去掉$"
+        
         switch title {
         case "1","2","3","4","5","6","7","8","9","0":
-            resultString += title
+            if resultString.characters.count <= 9 {//最多支持9个数字（包括小数点）
+                if resultString != "0" {
+                    resultString += title
+                }else {
+                    resultString = title
+                }
+            }
+        case ".":
+            if !resultString.contains(".") && resultString.characters.count <= 9  {  //确保不包含.的情况再下输入.
+                resultString += title
+            }
+        case "⌫":
+            if resultString != "0" {  //在非0情况下删除
+                if resultString.characters.count == 2 { //如"$2"仅剩余两个字符,再删除一个就变"$0"
+                    resultString = "0"
+                }else {
+                    resultString.characters.removeLast()
+                }
+            }
+        case "C":
+            resultString = "0"
+        case "Done":
+            if resultString.characters.last == "." { //如果确定后最有一个字符是“.”无意义，移除它。
+                resultString.characters.removeLast()
+            }
+            textField.resignFirstResponder()
         default:
             break
         }
-        textField.text = resultString
+        textField.text = "$" + resultString
+        
     }
     
     func space() -> Int{

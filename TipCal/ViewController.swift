@@ -65,6 +65,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         pickerSelect = 1
 //        setAlertView()
         popPickerView()
+        textField.resignFirstResponder()
     }
     
     @IBAction func tapStar(_ sender: UIButton) {
@@ -89,12 +90,14 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         pickerSelect = 2
 //        setAlertView()
         popPickerView()
+        textField.resignFirstResponder()
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        textField.text = "$0"
 
     }
 
