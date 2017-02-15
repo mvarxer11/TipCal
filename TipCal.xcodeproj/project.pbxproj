@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */; };
+		1B5F19C81E54497C0073212E /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C71E54497C0073212E /* PopPickerView.swift */; };
 		1BA3DCFB1E50C5EE00194655 /* MakeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3DCFA1E50C5EE00194655 /* MakeString.swift */; };
-		1BA3DD431E52A8AC00194655 /* popPickerViewFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3DD421E52A8AC00194655 /* popPickerViewFunction.swift */; };
 		1BA3DD451E52AD0400194655 /* UIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3DD441E52AD0400194655 /* UIInput.swift */; };
 		1BD905011E4CA87E0017C667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905001E4CA87E0017C667 /* AppDelegate.swift */; };
 		1BD905031E4CA87E0017C667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905021E4CA87E0017C667 /* ViewController.swift */; };
@@ -20,7 +20,6 @@
 		1BD905211E4CA87E0017C667 /* TipCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905201E4CA87E0017C667 /* TipCalUITests.swift */; };
 		1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */; };
 		1BE6F3441E52D4C2008D2BB5 /* TestInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3431E52D4C2008D2BB5 /* TestInputView.swift */; };
-		1BE6F3461E530087008D2BB5 /* TextfieldSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3451E530087008D2BB5 /* TextfieldSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +41,8 @@
 
 /* Begin PBXFileReference section */
 		1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewSetting.swift; sourceTree = "<group>"; };
+		1B5F19C71E54497C0073212E /* PopPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopPickerView.swift; path = ../PopPickerView.swift; sourceTree = "<group>"; };
 		1BA3DCFA1E50C5EE00194655 /* MakeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeString.swift; sourceTree = "<group>"; };
-		1BA3DD421E52A8AC00194655 /* popPickerViewFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popPickerViewFunction.swift; sourceTree = "<group>"; };
 		1BA3DD441E52AD0400194655 /* UIInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInput.swift; sourceTree = "<group>"; };
 		1BD904FD1E4CA87E0017C667 /* TipCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD905001E4CA87E0017C667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 		1BD905221E4CA87E0017C667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputViewLoading.swift; sourceTree = "<group>"; };
 		1BE6F3431E52D4C2008D2BB5 /* TestInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInputView.swift; sourceTree = "<group>"; };
-		1BE6F3451E530087008D2BB5 /* TextfieldSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +112,7 @@
 				1BD905001E4CA87E0017C667 /* AppDelegate.swift */,
 				1BD905021E4CA87E0017C667 /* ViewController.swift */,
 				1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */,
-				1BE6F3451E530087008D2BB5 /* TextfieldSetting.swift */,
-				1BA3DD421E52A8AC00194655 /* popPickerViewFunction.swift */,
+				1B5F19C71E54497C0073212E /* PopPickerView.swift */,
 				1BA3DD441E52AD0400194655 /* UIInput.swift */,
 				1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */,
 				1BA3DCFA1E50C5EE00194655 /* MakeString.swift */,
@@ -285,10 +282,9 @@
 			files = (
 				1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */,
 				1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */,
-				1BA3DD431E52A8AC00194655 /* popPickerViewFunction.swift in Sources */,
 				1BA3DCFB1E50C5EE00194655 /* MakeString.swift in Sources */,
 				1BA3DD451E52AD0400194655 /* UIInput.swift in Sources */,
-				1BE6F3461E530087008D2BB5 /* TextfieldSetting.swift in Sources */,
+				1B5F19C81E54497C0073212E /* PopPickerView.swift in Sources */,
 				1BD905031E4CA87E0017C667 /* ViewController.swift in Sources */,
 				1BD905011E4CA87E0017C667 /* AppDelegate.swift in Sources */,
 			);

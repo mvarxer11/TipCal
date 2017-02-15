@@ -8,7 +8,9 @@
 
 import UIKit
 
-extension ViewController {
+extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
+
+    
     
     //组件数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

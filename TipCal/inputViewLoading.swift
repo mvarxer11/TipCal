@@ -10,7 +10,7 @@ import UIKit
 
 extension ViewController:InputViewDelegate {
     func ButtonClick(_ title:String) {
-        var resultString:String = textField.text!
+        var resultString:String = checkAmountDisplay.text!
         resultString.characters.removeFirst()  //"去掉$"
         
         switch title {
@@ -40,11 +40,11 @@ extension ViewController:InputViewDelegate {
             if resultString.characters.last == "." { //如果确定后最有一个字符是“.”无意义，移除它。
                 resultString.characters.removeLast()
             }
-            textField.resignFirstResponder()
+            checkAmountDisplay.resignFirstResponder()
         default:
             break
         }
-        textField.text = "$" + resultString
+        checkAmountDisplay.text = "$" + resultString
         
     }
     
