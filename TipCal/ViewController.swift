@@ -42,7 +42,8 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     //弹出数字输入视图
     var numInputView:UIInputView!
     
-    
+    //一个手势识别，用于pickerView
+    var backgroundGestrue:UITapGestureRecognizer!
     
     @IBAction func tapPeople(_ sender: UIButton) {
         peopleCount = sender.tag

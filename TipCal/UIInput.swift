@@ -38,7 +38,6 @@ class UIInputView: UIView {
     
     func makeFrame(xTag:Int,yTag:Int,xCount:Int,yCount:Int) -> CGRect {
         
-        print(xTag,yTag,xCount,yCount)
         let unitWidth = (self.bounds.width - CGFloat(((delegate?.numberOfColumns())! + 1) * (delegate?.space())!)) / CGFloat((delegate?.numberOfColumns())!)
         let unitHeight = (self.bounds.height - CGFloat(((delegate?.numberOfRows())! + 1) * (delegate?.space())!)) / CGFloat((delegate?.numberOfRows())!)
         
@@ -47,7 +46,6 @@ class UIInputView: UIView {
         
         let width = CGFloat(xCount) * unitWidth + CGFloat((xCount - 1)*(delegate?.space())!)
         let height = CGFloat(yCount) * unitHeight + CGFloat((yCount - 1)*(delegate?.space())!)
-        print(CGRect(x: x, y: y, width: width, height: height))
         return CGRect(x: x, y: y, width: width, height: height)
 
     }
@@ -65,7 +63,6 @@ class UIInputView: UIView {
             btn.tag = 1000 + count
             buttonArray.append(btn)
             self.addSubview(btn)
-            print(btn)
         }
     }
     
@@ -73,9 +70,18 @@ class UIInputView: UIView {
         creatButton()
     }
     
+//    func dismiss() {  键盘收起并不销毁，用不上。
+//        for btn in buttonArray {
+//            btn.removeFromSuperview()
+//        }
+//        buttonArray = []
+//    }
+    
+    deinit {
+        print("inputView deinitialized.")
+    }
     
     func btnClicked(_ btn:UIButton) {
-        print(btn.title(for: .normal) ?? "btnTitle no found.")
         delegate?.ButtonClick(btn.title(for: .normal)!)
     }
 

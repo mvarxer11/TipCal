@@ -36,6 +36,8 @@ extension ViewController {
     
     //2、使用UIView.animate弹出PickerView
     
+    
+    
     func popPickerView() {
         
         let popViewHeight = UIScreen.main.bounds.height * 0.4
@@ -43,7 +45,8 @@ extension ViewController {
         //创建全透明底层接收手势
         backgroundView = UIView(frame: UIScreen.main.bounds)
         backgroundView.backgroundColor = .clear
-        backgroundView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(popViewDismiss)))
+        backgroundGestrue = UITapGestureRecognizer.init(target: self, action: #selector(popViewDismiss))
+        backgroundView.addGestureRecognizer(backgroundGestrue)
         
         //弹出的视图初始创建在屏幕外下方
         popView = UIView(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width , height: popViewHeight ))
@@ -79,9 +82,12 @@ extension ViewController {
         }, completion: { (finished) in
             self.pickerView.removeFromSuperview()
             self.popView.removeFromSuperview()
+            self.backgroundView.removeGestureRecognizer(self.backgroundGestrue)
             self.backgroundView.removeFromSuperview()
             self.backgroundView = nil
             self.popView = nil
+            self.pickerView.delegate = nil
+            self.pickerView.dataSource = nil
             self.pickerView = nil
             
         })

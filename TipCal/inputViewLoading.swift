@@ -28,7 +28,7 @@ extension ViewController:InputViewDelegate {
             }
         case "⌫":
             if resultString != "0" {  //在非0情况下删除
-                if resultString.characters.count == 2 { //如"$2"仅剩余两个字符,再删除一个就变"$0"
+                if resultString.characters.count == 1 { //如"$2"仅剩余两个字符,再删除一个就变"$0"
                     resultString = "0"
                 }else {
                     resultString.characters.removeLast()
