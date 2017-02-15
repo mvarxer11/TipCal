@@ -79,6 +79,7 @@ class UIInputView: UIView {
     }
     
     func hide() {
+        
         UIView.animate(withDuration: 0.2, animations: {
             self.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height , width: UIScreen.main.bounds.width , height: self.viewHeight)
         }, completion: nil)

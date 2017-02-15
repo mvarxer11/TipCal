@@ -40,7 +40,10 @@ extension ViewController:InputViewDelegate {
             if resultString.characters.last == "." { //如果确定后最有一个字符是“.”无意义，移除它。
                 resultString.characters.removeLast()
             }
-            checkAmountDisplay.resignFirstResponder()
+            numInputView.hide()
+            checkAmountDisplay.backgroundColor = .gray
+
+            
         default:
             break
         }
