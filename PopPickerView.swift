@@ -21,7 +21,7 @@ class PopPickerView: UIView {
         super.init(frame:frame)
         popViewHeight = UIScreen.main.bounds.height * 0.4
         self.backgroundColor = .white
-        self.alpha = 0.8
+        self.alpha = 0.9
         
         pickerView = UIPickerView(frame: CGRect(x: 20, y: 20, width: self.bounds.width - 40, height: self.bounds.height - 40))
         self.addSubview(pickerView)

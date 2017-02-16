@@ -18,6 +18,7 @@
 		1BD9050B1E4CA87E0017C667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD905091E4CA87E0017C667 /* LaunchScreen.storyboard */; };
 		1BD905161E4CA87E0017C667 /* TipCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905151E4CA87E0017C667 /* TipCalTests.swift */; };
 		1BD905211E4CA87E0017C667 /* TipCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905201E4CA87E0017C667 /* TipCalUITests.swift */; };
+		1BDA3BD71E560E46008C28B7 /* GuestCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */; };
 		1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */; };
 		1BE6F3441E52D4C2008D2BB5 /* TestInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3431E52D4C2008D2BB5 /* TestInputView.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		1BD9051C1E4CA87E0017C667 /* TipCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD905201E4CA87E0017C667 /* TipCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalUITests.swift; sourceTree = "<group>"; };
 		1BD905221E4CA87E0017C667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCheck.swift; sourceTree = "<group>"; };
 		1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputViewLoading.swift; sourceTree = "<group>"; };
 		1BE6F3431E52D4C2008D2BB5 /* TestInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				1B5F19C71E54497C0073212E /* PopPickerView.swift */,
 				1BA3DD441E52AD0400194655 /* UIInput.swift */,
 				1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */,
+				1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */,
 				1BA3DCFA1E50C5EE00194655 /* MakeString.swift */,
 				1BD905041E4CA87E0017C667 /* Main.storyboard */,
 				1BD905071E4CA87E0017C667 /* Assets.xcassets */,
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */,
+				1BDA3BD71E560E46008C28B7 /* GuestCheck.swift in Sources */,
 				1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */,
 				1BA3DCFB1E50C5EE00194655 /* MakeString.swift in Sources */,
 				1BA3DD451E52AD0400194655 /* UIInput.swift in Sources */,
@@ -382,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -441,6 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R68C9ZGXGD;
 				INFOPLIST_FILE = TipCal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.com.TipCal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R68C9ZGXGD;
 				INFOPLIST_FILE = TipCal/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.com.TipCal;
 				PRODUCT_NAME = "$(TARGET_NAME)";

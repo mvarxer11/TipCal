@@ -35,6 +35,15 @@ class ViewController: UIViewController {
     var starCount = 15  //15% 默认三颗星  以此来判断pickerView的初始位置
     
     @IBOutlet weak var checkAmountDisplay: UILabel!
+    
+    
+    @IBOutlet weak var guestCheckView: UIView!
+    @IBOutlet weak var totalToPayLabel: UILabel!
+    @IBOutlet weak var totalTipLabel: UILabel!
+    @IBOutlet weak var totalPerPersonLabel: UILabel!
+    @IBOutlet weak var tipPerPersonLabel: UILabel!
+    
+    
 
     
     //用于弹出的视图
@@ -56,6 +65,7 @@ class ViewController: UIViewController {
         peopleCount = sender.tag
         updatePeopleIcon(count: peopleCount)
         peopleTitle.text = peopleSplitStringMake(number: peopleCount)
+        updateGuestCheckView()
     }
     
     
@@ -95,7 +105,7 @@ class ViewController: UIViewController {
         starCount = sender.tag * 5
         updateStarIcon(count: sender.tag)
         starTitle.text = serviceStringMake(percentage: starCount)
-        
+        updateGuestCheckView()
         
     }
     
@@ -131,9 +141,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let gesture = UITapGestureRecognizer.init(target: self, action: #selector(closeAllPopView))
-//        upperView.addGestureRecognizer(gesture)
         self.view.addGestureRecognizer(gesture)
-        
+//        upperView.backgroundColor = .blue
+//        upperView.addGestureRecognizer(gesture)
         peoplePopPickerView  = PopPickerView(frame: CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height*0.4 ))
         self.view.addSubview(peoplePopPickerView)
         
@@ -151,8 +161,14 @@ class ViewController: UIViewController {
         
 
         numInputView.creatButton()
+        
+        //初始隐藏账单
+        hideGuestCheckView()
+        
 
     }
+    
+ 
     
     
     
@@ -164,7 +180,7 @@ class ViewController: UIViewController {
 //        }
         if numInputView.isShow {
             numInputView.hide()
-            checkAmountDisplay.backgroundColor = .gray
+            checkAmountDisplay.backgroundColor = .clear
         } else {
             closeAllPopView()
             numInputView.show()
@@ -178,6 +194,7 @@ class ViewController: UIViewController {
         //点击背景图关闭当前的弹出视图
         func closeAllPopView() {
             
+            checkAmountDisplay.backgroundColor = .clear
             if peoplePopPickerView.isShow {
                 peoplePopPickerView.pickerView.delegate = nil
                 peoplePopPickerView.pickerView.dataSource = nil
@@ -191,6 +208,7 @@ class ViewController: UIViewController {
             if numInputView.isShow {
                 numInputView.hide()
             }
+            updateGuestCheckView()
         }
     
     

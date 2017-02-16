@@ -37,13 +37,17 @@ extension ViewController:InputViewDelegate {
         case "C":
             resultString = "0"
         case "Done":
-            if resultString.characters.last == "." { //如果确定后最有一个字符是“.”无意义，移除它。
-                resultString.characters.removeLast()
+            if resultString == "0" {
+                hideGuestCheckView()
+            }else {
+                if resultString.characters.last == "." { //如果确定后最有一个字符是“.”无意义，移除它。
+                    resultString.characters.removeLast()
+                }
+                updateGuestCheckView() //更新账单内容
+                showGuestCheckView() //显式账单
             }
             numInputView.hide()
             checkAmountDisplay.backgroundColor = .gray
-
-            
         default:
             break
         }
