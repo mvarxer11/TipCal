@@ -21,7 +21,7 @@ extension ViewController {
         var temp:String = checkAmountDisplay.text!
         temp.characters.removeFirst()
         let amount:Double = Double(temp)!
-        let servicePer:Double = Double(self.starCount) / 100.0
+        let servicePer:Double = Double(self.service) / 100.0
         let people:Double = Double(self.peopleCount)
         
         totalToPayLabel.text = makeString(doubleValue: (amount * servicePer + amount))

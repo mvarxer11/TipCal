@@ -16,23 +16,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var peopleView: UIStackView!
     @IBOutlet weak var peopleTitle: UILabel!
-    @IBOutlet weak var people1: UIButton!
-    @IBOutlet weak var people2: UIButton!
-    @IBOutlet weak var people3: UIButton!
-    @IBOutlet weak var people4: UIButton!
-    @IBOutlet weak var people5: UIButton!
+
+    @IBOutlet weak var peopleSelectorBar: SelectorBar!
     @IBOutlet weak var peopleMore: UIButton!
     var peopleCount = 2 //默认2人数 以此来判断pickerView的初始位置
     
     @IBOutlet weak var starView: UIStackView!
     @IBOutlet weak var starTitle: UILabel!
-    @IBOutlet weak var star1: UIButton!
-    @IBOutlet weak var star2: UIButton!
-    @IBOutlet weak var star3: UIButton!
-    @IBOutlet weak var star4: UIButton!
-    @IBOutlet weak var star5: UIButton!
+
+
+    @IBOutlet weak var starSelectorBar: SelectorBar!
     @IBOutlet weak var starMore: UIButton!
-    var starCount = 15  //15% 默认三颗星  以此来判断pickerView的初始位置
+    var starCount = 3  // 默认三颗星  以此来判断pickerView的初始位置
+    var service = 15  //表示15%
     
     @IBOutlet weak var checkAmountDisplay: UILabel!
     
@@ -59,24 +55,15 @@ class ViewController: UIViewController {
     //一个手势识别，用于pickerView
     var backgroundGestrue:UITapGestureRecognizer!
     
-    @IBAction func tapPeople(_ sender: UIButton) {
-        
+    @IBAction func tapPeopleSelectorBat(_ sender: SelectorBar) {
         closeAllPopView()
-        peopleCount = sender.tag
-        updatePeopleIcon(count: peopleCount)
+        peopleCount = sender.last
         peopleTitle.text = peopleSplitStringMake(number: peopleCount)
         updateGuestCheckView()
+        
     }
-    
-    
-    func updatePeopleIcon(count:Int) {
-        for v in peopleView.subviews {
-            if v.isKind(of: UIButton.self) {
-                let people = v as! UIButton
-                people.isSelected = (people.tag <= count)
-            }
-        }
-    }
+
+
     
     
     var peoplePickerIsShow = false
@@ -99,23 +86,12 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func tapStar(_ sender: UIButton) {
-        
+    @IBAction func tapStarSelectorBar(_ sender: SelectorBar) {
         closeAllPopView()
-        starCount = sender.tag * 5
-        updateStarIcon(count: sender.tag)
-        starTitle.text = serviceStringMake(percentage: starCount)
+        starCount = starSelectorBar.last
+        service = starCount * 5
+        starTitle.text = serviceStringMake(percentage: service)
         updateGuestCheckView()
-        
-    }
-    
-    func updateStarIcon(count:Int) {
-        for v in starView.subviews {
-            if v.isKind(of: UIButton.self) {
-                let star = v as! UIButton
-                star.isSelected = (star.tag <= count)
-            }
-        }
     }
     
     
@@ -129,7 +105,7 @@ class ViewController: UIViewController {
             closeAllPopView()
             starPopPickerView.pickerView.delegate = self
             starPopPickerView.pickerView.dataSource = self
-            starPopPickerView.pickerView.selectRow(starCount, inComponent: 0, animated: false)
+            starPopPickerView.pickerView.selectRow(service, inComponent: 0, animated: false)
             starPopPickerView.show()
         }
 

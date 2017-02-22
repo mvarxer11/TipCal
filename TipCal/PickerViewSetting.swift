@@ -40,12 +40,12 @@ extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
         if pickerSelect == 1 {
             peopleTitle.text = peopleSplitStringMake(number: row + 1)
             peopleCount = row + 1
-            updatePeopleIcon(count: peopleCount)
-            
+            peopleSelectorBar.setLast(last: peopleCount)
         }else {
             starTitle.text = serviceStringMake(percentage: row)
-            starCount = row
-            updateStarIcon(count: starCount/5)
+            service = row
+            starCount = row/5
+            starSelectorBar.setLast(last: starCount)
         }
     }
     

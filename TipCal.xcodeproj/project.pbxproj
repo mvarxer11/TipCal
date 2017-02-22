@@ -11,6 +11,7 @@
 		1B5F19C81E54497C0073212E /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C71E54497C0073212E /* PopPickerView.swift */; };
 		1BA3DCFB1E50C5EE00194655 /* MakeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3DCFA1E50C5EE00194655 /* MakeString.swift */; };
 		1BA3DD451E52AD0400194655 /* UIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3DD441E52AD0400194655 /* UIInput.swift */; };
+		1BBFEF1F1E5DB06F00F6AEDB /* SelectorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBFEF1E1E5DB06F00F6AEDB /* SelectorBar.swift */; };
 		1BD905011E4CA87E0017C667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905001E4CA87E0017C667 /* AppDelegate.swift */; };
 		1BD905031E4CA87E0017C667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905021E4CA87E0017C667 /* ViewController.swift */; };
 		1BD905061E4CA87E0017C667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD905041E4CA87E0017C667 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		1B5F19C71E54497C0073212E /* PopPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopPickerView.swift; path = ../PopPickerView.swift; sourceTree = "<group>"; };
 		1BA3DCFA1E50C5EE00194655 /* MakeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeString.swift; sourceTree = "<group>"; };
 		1BA3DD441E52AD0400194655 /* UIInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInput.swift; sourceTree = "<group>"; };
+		1BBFEF1E1E5DB06F00F6AEDB /* SelectorBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBar.swift; sourceTree = "<group>"; };
 		1BD904FD1E4CA87E0017C667 /* TipCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD905001E4CA87E0017C667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BD905021E4CA87E0017C667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,10 +90,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BBFEF1A1E5DACC300F6AEDB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1BD905021E4CA87E0017C667 /* ViewController.swift */,
+				1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */,
+				1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */,
+				1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1BBFEF1B1E5DACE600F6AEDB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BA3DCFA1E50C5EE00194655 /* MakeString.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1BBFEF1C1E5DACF000F6AEDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BD905041E4CA87E0017C667 /* Main.storyboard */,
+				1B5F19C71E54497C0073212E /* PopPickerView.swift */,
+				1BBFEF1E1E5DB06F00F6AEDB /* SelectorBar.swift */,
+				1BA3DD441E52AD0400194655 /* UIInput.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1BBFEF1D1E5DADC700F6AEDB /* support file */ = {
+			isa = PBXGroup;
+			children = (
+				1BD905091E4CA87E0017C667 /* LaunchScreen.storyboard */,
+				1BD905071E4CA87E0017C667 /* Assets.xcassets */,
+				1BD905001E4CA87E0017C667 /* AppDelegate.swift */,
+				1BD9050C1E4CA87E0017C667 /* Info.plist */,
+			);
+			name = "support file";
+			path = TipCal;
+			sourceTree = "<group>";
+		};
 		1BD904F41E4CA87E0017C667 = {
 			isa = PBXGroup;
 			children = (
 				1BD904FF1E4CA87E0017C667 /* TipCal */,
+				1BBFEF1D1E5DADC700F6AEDB /* support file */,
 				1BD905141E4CA87E0017C667 /* TipCalTests */,
 				1BD9051F1E4CA87E0017C667 /* TipCalUITests */,
 				1BD904FE1E4CA87E0017C667 /* Products */,
@@ -111,18 +156,9 @@
 		1BD904FF1E4CA87E0017C667 /* TipCal */ = {
 			isa = PBXGroup;
 			children = (
-				1BD905001E4CA87E0017C667 /* AppDelegate.swift */,
-				1BD905021E4CA87E0017C667 /* ViewController.swift */,
-				1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */,
-				1B5F19C71E54497C0073212E /* PopPickerView.swift */,
-				1BA3DD441E52AD0400194655 /* UIInput.swift */,
-				1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */,
-				1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */,
-				1BA3DCFA1E50C5EE00194655 /* MakeString.swift */,
-				1BD905041E4CA87E0017C667 /* Main.storyboard */,
-				1BD905071E4CA87E0017C667 /* Assets.xcassets */,
-				1BD905091E4CA87E0017C667 /* LaunchScreen.storyboard */,
-				1BD9050C1E4CA87E0017C667 /* Info.plist */,
+				1BBFEF1B1E5DACE600F6AEDB /* Model */,
+				1BBFEF1C1E5DACF000F6AEDB /* View */,
+				1BBFEF1A1E5DACC300F6AEDB /* Controller */,
 			);
 			path = TipCal;
 			sourceTree = "<group>";
@@ -209,7 +245,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = mvarxer;
 				TargetAttributes = {
 					1BD904FC1E4CA87E0017C667 = {
@@ -284,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */,
+				1BBFEF1F1E5DB06F00F6AEDB /* SelectorBar.swift in Sources */,
 				1BDA3BD71E560E46008C28B7 /* GuestCheck.swift in Sources */,
 				1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */,
 				1BA3DCFB1E50C5EE00194655 /* MakeString.swift in Sources */,
@@ -364,6 +401,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -414,6 +452,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
