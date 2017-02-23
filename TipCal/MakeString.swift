@@ -2,12 +2,11 @@
 //  MakeString.swift
 //  TipCal
 //
-//  Created by mvarxer on 17/2/13.
+//  Created by mvarxer on 17/2/24.
 //  Copyright © 2017年 mvarxer. All rights reserved.
 //
 
 import Foundation
-
 
 
 //参数：percentage 百分数
@@ -27,7 +26,7 @@ func serviceStringMake(percentage:Int)->String {
     default:
         return String(percentage) + "% Service Excellent!"
     }
-
+    
 }
 
 //根据给定人数返回peopleSplitString

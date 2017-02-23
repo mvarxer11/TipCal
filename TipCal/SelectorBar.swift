@@ -75,7 +75,6 @@ class SelectorBar: UIControl {
     }
     
     public override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        print(touch.location(in: self).x)
         return touchToDo(touch)
         
     }

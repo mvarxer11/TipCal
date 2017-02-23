@@ -38,11 +38,11 @@ extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
     //选项改变后，触发代理事件
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerSelect == 1 {
-            peopleTitle.text = peopleSplitStringMake(number: row + 1)
+            peopleTitle.setPeopleNumber(num: row + 1)
             peopleCount = row + 1
             peopleSelectorBar.setLast(last: peopleCount)
         }else {
-            starTitle.text = serviceStringMake(percentage: row)
+            starTitle.setServicePercentage(percentage: row)
             service = row
             starCount = row/5
             starSelectorBar.setLast(last: starCount)
