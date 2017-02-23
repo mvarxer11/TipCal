@@ -87,7 +87,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="tapPeopleSelectorBar:" destination="BYZ-38-t0r" eventType="valueChanged" id="e47-CY-BuT"/>
                                     <action selector="tapStarSelectorBar:" destination="BYZ-38-t0r" eventType="valueChanged" id="ijW-Fj-mq4"/>
                                 </connections>
                             </view>
