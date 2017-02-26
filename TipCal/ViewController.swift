@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         peopleMore.setImage(#imageLiteral(resourceName: "more_button_hidden"), for: .normal)
         peopleCount = sender.last
         peopleTitle.setPeopleNumber(num: peopleCount)
+        guestCheckView.updateGuestCheckView(people: peopleCount, service: service, checkAmout: Double(checkamountView.numberString)!)
         
     }
 
@@ -81,6 +82,7 @@ class ViewController: UIViewController {
             peoplePopPickerView.pickerView.selectRow(peopleCount - 1, inComponent: 0, animated: false)
             peoplePopPickerView.show()
         }
+        guestCheckView.updateGuestCheckView(people: peopleCount, service: service, checkAmout: Double(checkamountView.numberString)!)
         
     }
 
@@ -90,6 +92,8 @@ class ViewController: UIViewController {
         starCount = starSelectorBar.last
         service = starCount * 5
         starTitle.setServicePercentage(percentage: service)
+        
+        guestCheckView.updateGuestCheckView(people: peopleCount, service: service, checkAmout: Double(checkamountView.numberString)!)
 
     }
 
@@ -107,6 +111,7 @@ class ViewController: UIViewController {
             starPopPickerView.pickerView.selectRow(service, inComponent: 0, animated: false)
             starPopPickerView.show()
         }
+        guestCheckView.updateGuestCheckView(people: peopleCount, service: service, checkAmout: Double(checkamountView.numberString)!)
 
     }
     
