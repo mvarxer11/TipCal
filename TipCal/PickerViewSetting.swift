@@ -41,11 +41,23 @@ extension ViewController:UIPickerViewDataSource,UIPickerViewDelegate{
             peopleTitle.setPeopleNumber(num: row + 1)
             peopleCount = row + 1
             peopleSelectorBar.setLast(last: peopleCount)
+            if peopleCount > 5 {
+                peopleMore.setImage(#imageLiteral(resourceName: "more_button"), for: .normal)
+            } else {
+                peopleMore.setImage(#imageLiteral(resourceName: "more_button_hidden"), for: .normal)
+            }
+            
         }else {
             starTitle.setServicePercentage(percentage: row)
             service = row
             starCount = row/5
             starSelectorBar.setLast(last: starCount)
+            if service > 25 {
+                starMore.setImage(#imageLiteral(resourceName: "more_button"), for: .normal)
+            } else {
+                starMore.setImage(#imageLiteral(resourceName: "more_button_hidden"), for: .normal)
+            }
+            
         }
     }
     

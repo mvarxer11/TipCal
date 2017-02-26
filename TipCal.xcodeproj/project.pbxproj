@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B57D6DA1E6318F10082C377 /* GuestCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57D6D91E6318F10082C377 /* GuestCheck.swift */; };
+		1B57D6DC1E6319310082C377 /* GuestCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B57D6DB1E6319310082C377 /* GuestCheck.xib */; };
 		1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */; };
 		1B5F19C81E54497C0073212E /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C71E54497C0073212E /* PopPickerView.swift */; };
 		1B7A0E2A1E5F62BF0070D261 /* MakeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A0E291E5F62BF0070D261 /* MakeString.swift */; };
@@ -20,7 +22,6 @@
 		1BD9050B1E4CA87E0017C667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD905091E4CA87E0017C667 /* LaunchScreen.storyboard */; };
 		1BD905161E4CA87E0017C667 /* TipCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905151E4CA87E0017C667 /* TipCalTests.swift */; };
 		1BD905211E4CA87E0017C667 /* TipCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD905201E4CA87E0017C667 /* TipCalUITests.swift */; };
-		1BDA3BD71E560E46008C28B7 /* GuestCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */; };
 		1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */; };
 		1BE6F3441E52D4C2008D2BB5 /* TestInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE6F3431E52D4C2008D2BB5 /* TestInputView.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B57D6D91E6318F10082C377 /* GuestCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCheck.swift; sourceTree = "<group>"; };
+		1B57D6DB1E6319310082C377 /* GuestCheck.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GuestCheck.xib; path = ../GuestCheck.xib; sourceTree = "<group>"; };
 		1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewSetting.swift; sourceTree = "<group>"; };
 		1B5F19C71E54497C0073212E /* PopPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopPickerView.swift; path = ../PopPickerView.swift; sourceTree = "<group>"; };
 		1B7A0E291E5F62BF0070D261 /* MakeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeString.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		1BD9051C1E4CA87E0017C667 /* TipCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BD905201E4CA87E0017C667 /* TipCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalUITests.swift; sourceTree = "<group>"; };
 		1BD905221E4CA87E0017C667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCheck.swift; sourceTree = "<group>"; };
 		1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputViewLoading.swift; sourceTree = "<group>"; };
 		1BE6F3431E52D4C2008D2BB5 /* TestInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +99,6 @@
 			children = (
 				1BD905021E4CA87E0017C667 /* ViewController.swift */,
 				1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */,
-				1BDA3BD61E560E46008C28B7 /* GuestCheck.swift */,
 				1BE6F3411E52CEE3008D2BB5 /* inputViewLoading.swift */,
 			);
 			name = Controller;
@@ -119,6 +120,8 @@
 				1BBFEF1E1E5DB06F00F6AEDB /* SelectorBar.swift */,
 				1BA3DD441E52AD0400194655 /* UIInput.swift */,
 				1BAA809D1E5EC9CE001DF4DE /* StringView.swift */,
+				1B57D6D91E6318F10082C377 /* GuestCheck.swift */,
+				1B57D6DB1E6319310082C377 /* GuestCheck.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BD9050B1E4CA87E0017C667 /* LaunchScreen.storyboard in Resources */,
+				1B57D6DC1E6319310082C377 /* GuestCheck.xib in Resources */,
 				1BD905081E4CA87E0017C667 /* Assets.xcassets in Resources */,
 				1BD905061E4CA87E0017C667 /* Main.storyboard in Resources */,
 			);
@@ -323,9 +327,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE6F3421E52CEE3008D2BB5 /* inputViewLoading.swift in Sources */,
+				1B57D6DA1E6318F10082C377 /* GuestCheck.swift in Sources */,
 				1BAA809E1E5EC9CE001DF4DE /* StringView.swift in Sources */,
 				1BBFEF1F1E5DB06F00F6AEDB /* SelectorBar.swift in Sources */,
-				1BDA3BD71E560E46008C28B7 /* GuestCheck.swift in Sources */,
 				1B7A0E2A1E5F62BF0070D261 /* MakeString.swift in Sources */,
 				1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */,
 				1BA3DD451E52AD0400194655 /* UIInput.swift in Sources */,

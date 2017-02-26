@@ -13,8 +13,8 @@ protocol InputViewDelegate {
     func space() -> Int  //间隔
     func numberOfRows() -> Int
     func numberOfColumns() -> Int
-    func buttonSetting() -> [(title:String,xTag:Int,yTag:Int,xCount:Int,yCount:Int)]  //一个按钮可能占了几个小格子  比如("title",1,1,1,2） 表示一个按钮在占据第一行第一列，水平方向1个格，垂直方向占2个格
-    func ButtonClick(_ titil:String)
+    func buttonSetting() -> [(title:String,xTag:Int,yTag:Int,xCount:Int,yCount:Int,normalImage:UIImage,highlightImage:UIImage,tag:Int)]  //一个按钮可能占了几个小格子  比如("title",1,1,1,2） 表示一个按钮在占据第一行第一列，水平方向1个格，垂直方向占2个格
+    func ButtonClick(_ tag:Int)
     
 }
 
@@ -52,23 +52,17 @@ class UIInputView: UIView {
     }
     
     func creatButton() {
-        
         for b in (delegate?.buttonSetting())! {
-            
             let btn = UIButton(frame: makeFrame(xTag:b.xTag,yTag:b.yTag,xCount:b.xCount,yCount:b.yCount))
-            btn.backgroundColor = .lightGray
-            btn.layer.cornerRadius = 5
-            btn.setTitle(b.title, for: .normal)
-            btn.titleLabel?.font = UIFont.systemFont(ofSize: 22)
-            btn.showsTouchWhenHighlighted = true
+            btn.setImage(b.normalImage, for: .normal)
+            btn.setImage(b.highlightImage, for: .highlighted)
+            btn.tag = b.tag
             btn.addTarget(self, action: #selector(UIInputView.btnClicked(_:)), for: .touchUpInside)
             buttonArray.append(btn)
             self.addSubview(btn)
             
         }
-        
         isCreated = true
-        
     }
     
     func show() {
@@ -79,7 +73,6 @@ class UIInputView: UIView {
     }
     
     func hide() {
-        
         UIView.animate(withDuration: 0.2, animations: {
             self.frame = CGRect(x: 0, y: UIScreen.main.bounds.size.height , width: UIScreen.main.bounds.width , height: self.viewHeight)
         }, completion: nil)
@@ -88,7 +81,7 @@ class UIInputView: UIView {
 
     
     func btnClicked(_ btn:UIButton) {
-        delegate?.ButtonClick(btn.title(for: .normal)!)
+        delegate?.ButtonClick(btn.tag)
     }
 
 }
