@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B57D6DA1E6318F10082C377 /* GuestCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B57D6D91E6318F10082C377 /* GuestCheck.swift */; };
 		1B57D6DC1E6319310082C377 /* GuestCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B57D6DB1E6319310082C377 /* GuestCheck.xib */; };
+		1B57D6DE1E63FE970082C377 /* Tock.caf in Resources */ = {isa = PBXBuildFile; fileRef = 1B57D6DD1E63FE970082C377 /* Tock.caf */; };
 		1B5F19C41E5358FF0073212E /* PickerViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */; };
 		1B5F19C81E54497C0073212E /* PopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5F19C71E54497C0073212E /* PopPickerView.swift */; };
 		1B7A0E2A1E5F62BF0070D261 /* MakeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A0E291E5F62BF0070D261 /* MakeString.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		1B57D6D91E6318F10082C377 /* GuestCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestCheck.swift; sourceTree = "<group>"; };
 		1B57D6DB1E6319310082C377 /* GuestCheck.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GuestCheck.xib; path = ../GuestCheck.xib; sourceTree = "<group>"; };
+		1B57D6DD1E63FE970082C377 /* Tock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tock.caf; sourceTree = "<group>"; };
 		1B5F19C31E5358FF0073212E /* PickerViewSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewSetting.swift; sourceTree = "<group>"; };
 		1B5F19C71E54497C0073212E /* PopPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopPickerView.swift; path = ../PopPickerView.swift; sourceTree = "<group>"; };
 		1B7A0E291E5F62BF0070D261 /* MakeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeString.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		1BBFEF1D1E5DADC700F6AEDB /* support file */ = {
 			isa = PBXGroup;
 			children = (
+				1B57D6DD1E63FE970082C377 /* Tock.caf */,
 				1BD905091E4CA87E0017C667 /* LaunchScreen.storyboard */,
 				1BD905071E4CA87E0017C667 /* Assets.xcassets */,
 				1BD905001E4CA87E0017C667 /* AppDelegate.swift */,
@@ -302,6 +305,7 @@
 				1B57D6DC1E6319310082C377 /* GuestCheck.xib in Resources */,
 				1BD905081E4CA87E0017C667 /* Assets.xcassets in Resources */,
 				1BD905061E4CA87E0017C667 /* Main.storyboard in Resources */,
+				1B57D6DE1E63FE970082C377 /* Tock.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

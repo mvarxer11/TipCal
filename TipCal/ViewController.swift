@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
+import AudioToolbox
 class ViewController: UIViewController {
+    
+    var soundID:SystemSoundID = 0
     
     @IBOutlet weak var upperGesture: UIView!//接受手势关闭弹出视图
    
@@ -174,6 +176,8 @@ class ViewController: UIViewController {
         guestCheckView.isHidden = true
         dish.isHidden = false
         
+        setButtonSound()
+        
 
     }
    
@@ -196,6 +200,11 @@ class ViewController: UIViewController {
         }
         
         guestCheckView.updateGuestCheckView(people: peopleCount, service: service, checkAmout: Double(checkamountView.numberString)!)
+    }
+    
+    func setButtonSound() {
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Tock", ofType: "caf")!)
+        AudioServicesCreateSystemSoundID(url as CFURL, &soundID)
     }
     
 

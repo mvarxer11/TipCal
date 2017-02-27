@@ -7,16 +7,21 @@
 //
 
 import UIKit
-
+import AudioToolbox
 extension ViewController:InputViewDelegate {
+    
+
+    
     func ButtonClick(_ tag:Int) {
+        
+        AudioServicesPlaySystemSound(soundID)
         
         var resultString:String = checkamountView.numberString
 
         
         switch tag {
         case 1,2,3,4,5,6,7,8,9,0:
-            if resultString.characters.count <= 6 {//最多支持7个数字（包括小数点）
+            if resultString.characters.count < 6 {//最多支持6个数字（包括小数点）
                 if resultString != "0" {
                     resultString += String(tag)
                 }else {
